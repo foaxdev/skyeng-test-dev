@@ -14,7 +14,7 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 
 gulp.task("css", () => {
-  return gulp.src("source/less/style.less")
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
