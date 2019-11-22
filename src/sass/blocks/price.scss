@@ -1,0 +1,17 @@
+.price {
+  margin: 0;
+
+  font-size: 26px;
+  color: $blue;
+  text-align: center;
+}
+
+.price__currency {
+  top: -0.6em;
+
+  font-size: 14px;
+}
+
+.price__period {
+  font-size: 14px;
+}

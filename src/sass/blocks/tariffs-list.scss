@@ -1,0 +1,70 @@
+.tariffs-list {
+  @include list-reset();
+  display: flex;
+  flex-direction: column;
+}
+
+.tariffs-list__item {
+  cursor: pointer;
+
+  & h3::before {
+    position: absolute;
+    content: "";
+    top: -115px;
+    left: 50%;
+
+    margin-left: -42px;
+    width: 85px;
+    height: 85px;
+
+    background-repeat: no-repeat;
+    background-size: 85px;
+  }
+
+  &[data-name="tv"] h3::before {
+    background-image: url("/img/monitor.svg");
+  }
+
+  &[data-name="desktop"] h3::before {
+    background-image: url("/img/laptop.svg");
+  }
+
+  &[data-name="mobile"] h3::before {
+    background-image: url("/img/device.svg");
+  }
+}
+
+.tariffs-list__link {
+  display: block;
+  padding: 150px 30px 15px 30px;
+
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $light-grey;
+    outline: none;
+  }
+}
+
+.tariffs-list__header {
+  position: relative;
+
+  margin: 0 0 30px 0;
+
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: $blue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tariffs-list__description {
+  margin: 0 0 20px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: $grey;
+  text-align: center;
+}

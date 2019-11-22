@@ -37,9 +37,16 @@ module.exports = {
           use: [
             "css-loader",
             "postcss-loader",
-            "sass-loader"
+            "sass-loader?outputStyle=expanded"
           ]
         })
+      },
+      {
+        test: /\.svg$/,
+        loader: 'file-loader',
+        options: {
+          name: 'img/[name].[ext]',
+        }
       }
     ]
   },
