@@ -6,11 +6,24 @@
 
 .tariffs-list__item {
   cursor: pointer;
+}
+
+.tariffs-list__link {
+  display: block;
+  padding: 140px 30px 15px 30px;
+
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: $light-grey;
+    outline: none;
+  }
 
   & h3::before {
     position: absolute;
     content: "";
-    top: -115px;
+    top: -105px;
     left: 50%;
 
     margin-left: -42px;
@@ -34,19 +47,6 @@
   }
 }
 
-.tariffs-list__link {
-  display: block;
-  padding: 150px 30px 15px 30px;
-
-  border-radius: 5px;
-
-  &:hover,
-  &:focus {
-    background-color: $light-grey;
-    outline: none;
-  }
-}
-
 .tariffs-list__header {
   position: relative;
 
@@ -55,7 +55,7 @@
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 2.5px;
-  color: $blue;
+  color: $dark-blue;
   text-align: center;
   text-transform: uppercase;
 }
@@ -67,4 +67,45 @@
   line-height: 18px;
   color: $grey;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .tariffs-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tariffs-list__item {
+    min-width: 270px;
+
+    &:first-child {
+      order: 3;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+    }
+  }
+
+  .tariffs-list__link {
+    padding: 170px 30px 15px 30px;
+
+    & h3::before {
+      top: -120px;
+    }
+  }
+
+  .tariffs-list__header {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .tariffs-list__description {
+    font-size: 16px;
+  }
 }

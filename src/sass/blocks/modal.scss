@@ -1,7 +1,75 @@
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
   display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  min-height: 380px;
+  margin-left: -175px;
+  margin-top: -190px;
+  padding: 20px 30px;
+
+  background-color: $white;
+  border-radius: 5px;
 
   &--show {
-    display: block;
+    display: flex;
+  }
+
+  & a {
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      outline: none;
+      cursor: default;
+    }
+  }
+}
+
+.modal__header {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.modal__close-button {
+  @include hide-text();
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  background-image: url("/img/cross.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 450px;
+    margin-left: -225px;
+
   }
 }

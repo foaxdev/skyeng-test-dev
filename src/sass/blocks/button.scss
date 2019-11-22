@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 20px;
+
+  font-size: 16px;
+  color: $white;
+  text-align: center;
+
+  background-color: $bright-blue;
+  border: 1px solid $bright-blue;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $bright-blue;
+    background-color: $white;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
+  }
+}

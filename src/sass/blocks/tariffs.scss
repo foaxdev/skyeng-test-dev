@@ -8,3 +8,10 @@
   border-radius: 5px;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
+
+@media (min-width: $tablet-width) {
+  .tariffs {
+    margin-top: 150px;
+    width: 900px;
+  }
+}
