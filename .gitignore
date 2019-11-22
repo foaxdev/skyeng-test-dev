@@ -9,5 +9,6 @@
 node_modules/
 npm-debug.*
 Thumbs.db
-build/
+public/bundle.js
+public/bundle.min.js
 design/
