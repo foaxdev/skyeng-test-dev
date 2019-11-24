@@ -1,5 +1,5 @@
 import {tariffs} from "./tariffs";
-import {createCardTemplate, createModalCardTemplate} from "./components/card";
+import {createListCardTemplate, createCardTemplate} from "./components/card";
 
 const Key = {
   ESC: 'Escape'
@@ -24,7 +24,7 @@ const clearElement = container => {
 const openModalWindow = (tariffCard) => {
   currentTariff = tariffCard.querySelector('a').getAttribute('data-name');
   clearElement(modalWindowInfo);
-  render(modalWindowInfo, createModalCardTemplate(currentTariff));
+  render(modalWindowInfo, createCardTemplate(currentTariff));
   modalWindow.classList.add('modal--show');
   overlay.classList.add('overlay--show');
   closeButton.addEventListener('click', closeModalWindowByClickHandler);
@@ -50,7 +50,7 @@ const closeModalWindowByKeydownHandler = (evt) => {
 };
 
 for (const tariff in tariffs) {
-  render(tariffsList, createCardTemplate(tariff));
+  render(tariffsList, createListCardTemplate(tariff));
 }
 
 const tariffCards = document.querySelectorAll('.tariffs-list__item');
